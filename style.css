@@ -1,0 +1,226 @@
+/* ===== base ===== */
+:root{
+  --cream: #f4eee2;
+  --text: #2f2f2f;
+  --muted: #666;
+  --gold: #9a7b3f;
+  --navy: #1f3f72;
+  --shadow: 0 10px 24px rgba(0,0,0,.12);
+  --radius: 14px;
+}
+
+*{ box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+}
+
+/* ===== hero ===== */
+.hero{
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+  background:
+    radial-gradient(1200px 700px at 50% 35%, rgba(255,255,255,.55), rgba(255,255,255,0)),
+    var(--cream);
+}
+
+.hero__inner{
+  width: min(980px, 100%);
+  text-align: center;
+  padding: clamp(28px, 5vw, 56px) clamp(16px, 4vw, 56px);
+}
+
+.hero__title{
+  margin: 0;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .06em;
+  line-height: 1.25;
+  font-size: clamp(26px, 4.2vw, 44px);
+}
+
+.hero__line{
+  width: min(720px, 86%);
+  height: 1px;
+  margin: 18px auto 0;
+  background: rgba(154,123,63,.28);
+}
+
+.hero__lead{
+  margin: 22px 0 0;
+  font-size: clamp(15px, 2.2vw, 18px);
+  color: var(--text);
+  letter-spacing: .05em;
+}
+
+.hero__services{
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(13px, 2.1vw, 16px);
+  letter-spacing: .04em;
+}
+
+.hero__cta{
+  margin: 28px 0 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 240px;
+  padding: 16px 22px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .06em;
+  border: 1px solid transparent;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.btn--primary{
+  background: linear-gradient(180deg, #2a5596, var(--navy));
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn--ghost{
+  background: rgba(255,255,255,.78);
+  color: var(--navy);
+  border-color: rgba(31,63,114,.22);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.btn:hover{ transform: translateY(-1px); }
+.btn:active{ transform: translateY(0); box-shadow: none; }
+
+.hero__note{
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .03em;
+}
+
+.hero__small{
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: .03em;
+}
+
+/* ===== mobile ===== */
+@media (max-width: 520px){
+  .btn{ min-width: 100%; }
+  .hero__line{ margin-top: 14px; }
+}
+
+/* works page */
+.works{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+.work{
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.work-type{
+  color: #666;
+  font-size: 14px;
+}
+
+.work-desc{
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.work-point{
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.work-link a{
+  display: inline-block;
+  margin-top: 12px;
+  color: #1f3f72;
+  font-weight: 600;
+}
+.work-note{
+  margin-top: 6px;
+  color: #777;
+  font-size: 12px;
+}
+
+/* contact page */
+.contact{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 56px 16px;
+}
+
+.contact-lead{
+  margin-top: 14px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.contact-mail{
+  margin-top: 22px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact-mail a{
+  color: #1f3f72;
+  text-decoration: underline;
+}
+
+.contact-note{
+  margin-top: 10px;
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* page nav */
+.page-nav{
+  margin-bottom: 18px;
+}
+
+.page-nav a{
+  color: #777;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.page-nav a:hover{
+  color: #333;
+  text-decoration: underline;
+}
+
+
+.contact-back{
+  margin-top: 28px;
+}
+.contact-back a {
+  color: #777;              /* 少し薄いグレー */
+  text-decoration: none;    /* 下線消す */
+  font-size: 0.9rem;        /* 少し控えめ */
+  transition: color 0.2s ease;
+}
+
+.contact-back a:hover {
+  color: #333;              /* hoverで濃く */
+}
