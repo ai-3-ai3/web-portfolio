@@ -15,6 +15,10 @@ body{
   font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
   color: var(--text);
   background: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
 }
 
 /* ===== hero ===== */
@@ -117,11 +121,13 @@ body{
   letter-spacing: .03em;
 }
 
+
 .site-footer {
+  margin-top: auto;
   text-align: center;
-  padding: 40px 0;
+  padding: 24px 0;
   font-size: 0.9rem;
-  color: #666;
+  color: #aaa;
 }
 
 
