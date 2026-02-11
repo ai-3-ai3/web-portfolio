@@ -23,14 +23,23 @@ body{
 
 /* ===== hero ===== */
 .hero{
-  min-height: 100svh;
+  min-height: calc(100vh - 80px);
   display: grid;
   place-items: center;
   padding: 40px 16px;
   background:
-    radial-gradient(1200px 700px at 50% 35%, rgba(255,255,255,.55), rgba(255,255,255,0)),
+    radial-gradient(1200px 700px at 50% 35%,
+    rgba(255,255,255,.55),
+    rgba(255,255,255,0)),
     var(--cream);
 }
+
+@supports (height: 100svh){
+  .hero{
+    min-height: calc(100svh - 80px);
+  }
+}
+
 
 .hero__inner{
   width: min(980px, 100%);
