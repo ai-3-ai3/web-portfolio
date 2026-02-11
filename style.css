@@ -21,12 +21,11 @@ body{
 
 }
 
-/* ===== hero ===== */
 .hero{
-  min-height: calc(100vh - 80px);
+  min-height: auto;              /* ← 画面いっぱいをやめる */
   display: grid;
-  place-items: center;
-  padding: 40px 16px;
+  place-items: start center;
+  padding: 56px 16px 16px;       /* 上は少し、下は短め */
   background:
     radial-gradient(1200px 700px at 50% 35%,
     rgba(255,255,255,.55),
@@ -36,15 +35,18 @@ body{
 
 @supports (height: 100svh){
   .hero{
-    min-height: calc(100svh - 80px);
+    min-height: auto;            /* ← svh側もautoにする（超重要） */
   }
 }
+
+
+
 
 
 .hero__inner{
   width: min(980px, 100%);
   text-align: center;
-  padding: clamp(28px, 5vw, 56px) clamp(16px, 4vw, 56px);
+  padding: clamp(20px, 4vw, 44px) clamp(16px, 4vw, 44px);
 }
 
 .hero__title{
@@ -138,6 +140,73 @@ body{
   font-size: 0.9rem;
   color: #aaa;
 }
+
+.price {
+ padding: 20px 20px 48px;
+ background: #fafafa;
+ text-align: center;
+ margin-top: -20px;
+}
+
+
+.price__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.price__title {
+  
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  margin-bottom: 24px;
+}
+
+.price__grid {
+  display: grid;
+  gap: 18px;
+}
+
+.price__card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,.06);
+
+
+}
+
+.price__card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.price__amount {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2b6cb0;
+}
+
+.price__desc {
+  font-size: 14px;
+  color: #444;
+}
+
+.price__note {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* PC表示 */
+@media (min-width: 768px) {
+  .price__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 
 /* ===== mobile ===== */
