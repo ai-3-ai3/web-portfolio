@@ -200,6 +200,85 @@ body{
   color: #777;
 }
 
+/* home works */
+.home-works{
+  padding: 56px 20px;
+  background: var(--cream);
+}
+
+.home-works__inner{
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-works__title{
+  font-size: 30px;
+  margin-bottom: 14px;
+  letter-spacing: .05em;
+}
+
+.home-works__lead{
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 34px;
+}
+
+.home-works__grid{
+  display: grid;
+  gap: 18px;
+}
+
+.home-work-card{
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.05);
+  text-align: left;
+}
+
+.home-work-card h3{
+  margin: 0;
+  font-size: 22px;
+  color: var(--gold);
+}
+
+.home-work-card__type{
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.home-work-card__desc{
+  margin-top: 14px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 14px;
+}
+
+.home-work-card a{
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-work-card a:hover{
+  text-decoration: underline;
+}
+
+.home-work-card--sub h3{
+  color: #666;
+}
+
+@media (min-width:768px){
+  .home-works__grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
 /* PC表示 */
 @media (min-width: 768px) {
   .price__grid {
