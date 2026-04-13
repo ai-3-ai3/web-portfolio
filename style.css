@@ -196,7 +196,7 @@ body{
 
 .price__note {
   margin-top: 30px;
-  font-size: 13px;
+  font-size: 14px;
   color: #777;
 }
 
@@ -440,7 +440,7 @@ body{
   margin-top: 28px;
 }
 .contact-back a {
-  color: #777;              /* 少し薄いグレー */
+  color: #888;              /* 少し薄いグレー */
   text-decoration: none;    /* 下線消す */
   font-size: 0.9rem;        /* 少し控えめ */
   transition: color 0.2s ease;
