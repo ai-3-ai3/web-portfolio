@@ -512,24 +512,25 @@ img{
 
 @media (max-width:640px){
   .hero__left{
-    min-height:180px;
+    min-height:150px;
   }
 
   .hero__visual{
-    height:180px;
+    height:150px;
   }
 
   .hero__bg{
-    height:180px;
+    height:150px;
+    object-position:center top;
   }
 
   .hero__logo{
-    top:108px;
-    width:170px;
+    top:88px;
+    width:160px;
   }
 
   .hero__right{
-    padding:18px 16px 32px;
+    padding:10px 16px 32px;
   }
 
   .hero__title{
