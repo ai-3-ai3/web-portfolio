@@ -545,13 +545,28 @@ img{
   }
 
   .hero__title{
-    font-size:30px;
-    line-height:1.28;
-  }
+  font-size:28px;
+  line-height:1.3;
+}
+
+.hero__content{
+  max-width:92%;
+  margin:0 auto;
+}
+
+.hero__note{
+  font-size:11px;
+  color:#777;
+}
+
+.hero__small{
+  font-size:10px;
+  color:#888;
+}
 
   .hero__cta{
     flex-direction:column;
-    gap:12px;
+   gap:10px;
   }
 
   .btn{
