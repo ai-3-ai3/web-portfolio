@@ -34,6 +34,10 @@ img{
   display:block;
 }
 
+.sp-break{
+  display:none;
+}
+
 /* ===== hero ===== */
 .hero{
   background:var(--cream);
@@ -511,6 +515,11 @@ img{
 }
 
 @media (max-width:640px){
+
+ .sp-break{
+    display:inline;
+  }
+
   .hero__left{
     min-height:150px;
     position:relative;
