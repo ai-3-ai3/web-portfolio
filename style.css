@@ -671,9 +671,48 @@ img{
 .site-footer{
   margin-top:auto;
   text-align:center;
-  padding:28px 0;
+  padding:32px 16px 28px;
   color:#999;
   font-size:14px;
+}
+
+.site-footer__sns{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin-bottom:16px;
+}
+
+.site-footer__icon{
+  width:46px;
+  height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  background:rgba(255,255,255,.68);
+  border:1px solid rgba(31,63,114,.14);
+  color:var(--navy);
+  text-decoration:none;
+  transition:transform .2s ease, opacity .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.site-footer__icon svg{
+  width:20px;
+  height:20px;
+  fill:currentColor;
+}
+
+.site-footer__icon:hover{
+  transform:translateY(-2px);
+  opacity:.9;
+  background:#fff;
+  border-color:rgba(31,63,114,.24);
+}
+
+.site-footer p{
+  margin:0;
 }
 
 /* ===== responsive ===== */
@@ -836,5 +875,24 @@ img{
 
   .btn{
     width:100%;
+  }
+
+  .site-footer{
+    padding:28px 16px 24px;
+  }
+
+  .site-footer__sns{
+    gap:12px;
+    margin-bottom:14px;
+  }
+
+  .site-footer__icon{
+    width:44px;
+    height:44px;
+  }
+
+  .site-footer__icon svg{
+    width:19px;
+    height:19px;
   }
 }
